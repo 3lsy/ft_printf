@@ -6,16 +6,18 @@
 #    By: echavez- <echavez-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 18:36:36 by echavez-          #+#    #+#              #
-#    Updated: 2022/11/26 15:57:36 by echavez-         ###   ########.fr        #
+#    Updated: 2022/12/05 20:22:48 by echavez-         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME		=	libftprintf.a
 DIRSRC		=	./src/
+DIRFT		=	./libft/
 DIROBJ		=	./depo/
 INCLUDE		=	./include/
 SRC			=	#src
-OAUX		=	$(SRC:%=$(DIROBJ)%)
+SRCFT		=	#libft srcs
+OAUX		=	$(SRC:%=$(DIROBJ)%) $(SRCFT:%=$(DIROBJ)%)
 DEPS		=	$(OAUX:.c=.d)
 OBJS		=	$(OAUX:.c=.o)
 

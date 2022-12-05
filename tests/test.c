@@ -6,7 +6,7 @@
 /*   By: echavez- <echavez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 16:18:05 by echavez-          #+#    #+#             */
-/*   Updated: 2022/11/26 18:43:18 by echavez-         ###   ########.fr       */
+/*   Updated: 2022/12/05 20:38:30 by echavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int	main(void)
 {
-	int a = 42;
+	int	a;
 
+	a = 42;
 	printf("%c %d\n", 'a', 4);
 	printf("%s\n", "abcdefg hijklmnopqrs");
 	printf("%p\n", &a);

@@ -6,7 +6,7 @@
 /*   By: echavez- <echavez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 14:39:06 by echavez-          #+#    #+#             */
-/*   Updated: 2022/12/06 02:48:50 by echavez-         ###   ########.fr       */
+/*   Updated: 2022/12/06 12:35:28 by echavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 
 # define CONVERSIONS "dicsupxX%"
 # define DECIMAL "0123456789"
-# define LHEX DECIMAL"abcdef"
-# define UHEX DECIMAL"ABCDEF"
+# define LHEX "0123456789abcdef"
+# define UHEX "0123456789ABCDEF"
 
 typedef struct s_info {
 	int		counter;

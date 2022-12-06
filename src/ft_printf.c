@@ -6,7 +6,7 @@
 /*   By: echavez- <echavez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 20:41:16 by echavez-          #+#    #+#             */
-/*   Updated: 2022/12/05 23:37:02 by echavez-         ###   ########.fr       */
+/*   Updated: 2022/12/06 12:53:38 by echavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,26 @@
 
 t_info	*info(void)
 {
-	static t_info x;
+	static t_info	x;
 
 	return (&x);
 }
 
 void	v_printf(const char *format)
 {
-	int		i;
+	int	i;
+	int	*counter;
 
+	counter = &info()->counter;
 	i = 0;
 	while (format[i])
 	{
 		if (format[i] == '%' && ft_strchr(CONVERSIONS, format[i + 1]) != NULL)
 			pconv(format[(i++) + 1]);
 		else if (format[i] == '\\' && format[i + 1])
-			info()->counter += write(1, &format[i++], 2);
+			*counter += write(1, &format[i++], 2);
 		else
-			info()->counter += write(1, &format[i], 1);
+			*counter += write(1, &format[i], 1);
 		i++;
 	}
 }

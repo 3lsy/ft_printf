@@ -6,7 +6,7 @@
 /*   By: echavez- <echavez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 22:25:06 by echavez-          #+#    #+#             */
-/*   Updated: 2022/12/06 12:53:18 by echavez-         ###   ########.fr       */
+/*   Updated: 2022/12/06 13:08:07 by echavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,11 @@ void	pconv(char conv)
 		*counter += ft_uputnbr_base(va_arg(info()->ap, unsigned int), DECIMAL);
 	else if (conv == 'p')
 		*counter += p_print(va_arg(info()->ap, unsigned long));
+}
+
+t_info	*info(void)
+{
+	static t_info	x;
+
+	return (&x);
 }
